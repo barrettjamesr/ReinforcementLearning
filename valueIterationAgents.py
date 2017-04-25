@@ -36,7 +36,7 @@ class ValueIterationAgent(ValueEstimationAgent):
 
         #run simulations
         for i in range(self.iterations):
-            #make a copy of the values dictionary so that you don't change the values while running each simulation
+            #make a copy of the values dictionary so that you don't change the values while running each simulation (batch version vs online version)
             stateValues = dict(self.values)
             #iterate over all states and actions
             for state in states:
@@ -60,7 +60,6 @@ class ValueIterationAgent(ValueEstimationAgent):
           Return the value of the state (computed in __init__).
         """
         return self.values[state]
-
 
     def computeQValueFromValues(self, state, action):
         """
@@ -88,7 +87,6 @@ class ValueIterationAgent(ValueEstimationAgent):
           there are no legal actions, which is the case at the
           terminal state, you should return None.
         """
-
 
         "*** YOUR CODE HERE ***"
         actions = self.mdp.getPossibleActions(state)

@@ -35,7 +35,7 @@ def question3c():
 def question3d():
     answerDiscount = 0.5
     answerNoise = 0.5
-    answerLivingReward = 0.7
+    answerLivingReward = 0.5
     return answerDiscount, answerNoise, answerLivingReward
     # If not possible, return 'NOT POSSIBLE'
 
